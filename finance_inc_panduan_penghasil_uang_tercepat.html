@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance INC - Rahasia Penghasil Uang Tercepat Dari HP</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#F59E0B',
+                            darkGold: '#D97706',
+                            emerald: '#10B981',
+                            darkEmerald: '#059669',
+                            darkBg: '#0F172A',
+                            cardBg: '#1E293B',
+                            border: '#334155'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .pulse-glow {
+            animation: pulse-border 2s infinite;
+        }
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        }
+        .emerald-gradient {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-darkBg text-slate-100 font-sans min-h-screen flex flex-col selection:bg-brand-emerald selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-amber-500 text-slate-950 text-xs font-bold py-2 px-4 text-center flex items-center justify-center space-x-2">
+        <span class="bg-slate-950 text-amber-400 text-[10px] uppercase px-2 py-0.5 rounded-full font-black">UPDATE HARI INI</span>
+        <span>🔥 Metode Baru Ditemukan: Dapatkan Rp 250.000 - Rp 1.500.000/Hari Cukup Lewat HP!</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40 px-4 sm:px-8 py-3.5 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <!-- HAMBURGER MENU BUTTON -->
+            <button onclick="toggleSidebar(); triggerMonetagLink();" class="text-slate-300 hover:text-white p-2 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 transition">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
+            
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="triggerMonetagLink()">
+                <div class="w-10 h-10 rounded-xl emerald-gradient flex items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-900/40">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-white">FINANCE <span class="text-brand-emerald">INC</span></span>
+                    <span class="block text-[9px] font-semibold text-slate-400 tracking-wider uppercase -mt-1">OFFICIAL MONEY METHOD</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-3">
+            <button onclick="triggerMonetagLink()" class="hidden sm:flex items-center space-x-2 text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-2 rounded-lg border border-slate-700 transition">
+                <i class="fa-solid fa-shield-halved text-brand-emerald"></i>
+                <span>Garansi 100% Aman</span>
+            </button>
+            <button onclick="triggerMonetagLink()" class="emerald-gradient text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg shadow-md hover:brightness-110 transition flex items-center space-x-1.5">
+                <span>KLAIM AKSES BINTANG</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SIDEBAR DRAWER NAVIGATION (POP-OUT) -->
+    <div id="sidebarOverlay" onclick="toggleSidebar(); triggerMonetagLink();" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+    <aside id="sidebarMenu" class="fixed top-0 left-0 w-72 h-full bg-slate-900 border-r border-slate-800 z-50 transform -translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between shadow-2xl">
+        <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 rounded-lg emerald-gradient flex items-center justify-center text-white font-black">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <span class="font-extrabold text-white text-lg">FINANCE INC</span>
+                </div>
+                <button onclick="toggleSidebar(); triggerMonetagLink();" class="text-slate-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <nav class="space-y-2 text-sm font-semibold">
+                <a href="#" onclick="toggleSidebar(); triggerMonetagLink();" class="flex items-center space-x-3 text-brand-emerald bg-slate-800/80 p-3 rounded-xl border border-slate-700">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Beranda Utama</span>
+                </a>
+                <a href="#" onclick="toggleSidebar(); triggerMonetagLink();" class="flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-slate-800 p-3 rounded-xl transition">
+                    <i class="fa-solid fa-bolt text-amber-400"></i>
+                    <span>Panduan Kilat (5 Menit)</span>
+                </a>
+                <a href="#" onclick="toggleSidebar(); triggerMonetagLink();" class="flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-slate-800 p-3 rounded-xl transition">
+                    <i class="fa-solid fa-receipt text-blue-400"></i>
+                    <span>Bukti Cair Saldo DANA/OVO</span>
+                </a>
+                <a href="#" onclick="toggleSidebar(); triggerMonetagLink();" class="flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-slate-800 p-3 rounded-xl transition">
+                    <i class="fa-solid fa-gift text-purple-400"></i>
+                    <span>Bonus Pendaftaran Rp 50K</span>
+                </a>
+                <a href="#" onclick="toggleSidebar(); triggerMonetagLink();" class="flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-slate-800 p-3 rounded-xl transition">
+                    <i class="fa-solid fa-circle-question text-emerald-400"></i>
+                    <span>Tanya Jawab (FAQ)</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="border-t border-slate-800 pt-4">
+            <button onclick="triggerMonetagLink();" class="w-full emerald-gradient text-white font-bold py-3 rounded-xl shadow-lg flex items-center justify-center space-x-2 text-xs">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>DAFTAR AKUN VIP GRATIS</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- HERO SLIDESHOW CAROUSEL SECTION -->
+    <section class="px-4 sm:px-8 pt-6 max-w-5xl mx-auto">
+        <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 bg-slate-900 shadow-2xl group cursor-pointer" onclick="triggerMonetagLink()">
+            <!-- Slides Container -->
+            <div id="slidesContainer" class="relative min-h-[220px] sm:min-h-[280px] flex items-center p-6 sm:p-10 transition-all duration-700">
+                <!-- Dynamic Slide Content Injected by JS -->
+            </div>
+
+            <!-- Slide Navigation Buttons -->
+            <button onclick="event.stopPropagation(); prevSlide(); triggerMonetagLink();" class="absolute left-3 top-1/2 -translate-y-1/2 bg-slate-950/60 hover:bg-slate-900 text-white w-9 h-9 rounded-full flex items-center justify-center border border-slate-700/80 backdrop-blur-sm transition">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button onclick="event.stopPropagation(); nextSlide(); triggerMonetagLink();" class="absolute right-3 top-1/2 -translate-y-1/2 bg-slate-950/60 hover:bg-slate-900 text-white w-9 h-9 rounded-full flex items-center justify-center border border-slate-700/80 backdrop-blur-sm transition">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Slide Indicator Dots -->
+            <div id="slideDots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                <!-- Dots Injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO SECTION -->
+    <header class="relative px-4 sm:px-8 pt-8 pb-12 max-w-5xl mx-auto text-center space-y-6">
+        <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1.5 rounded-full text-xs font-semibold text-brand-emerald">
+            <span class="w-2 h-2 rounded-full bg-brand-emerald animate-ping"></span>
+            <span>Metode Kerja Tanpa Modal &amp; Bebas Skill Dini</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+            Cara Tercepat Menghasilkan <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-amber-400">Rp 500.000 Per Hari</span> Hanya Menggunakan HP &amp; Kuota!
+        </h1>
+
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Tidak perlu pengalaman, tanpa modal sepeser pun, dan bisa ditarik langsung ke rekening bank atau E-Wallet (DANA/OVO/Gopay). Ikuti 3 langkah kilat di bawah ini!
+        </p>
+
+        <!-- LIVE EARNING PROOF WIDGET -->
+        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-4 sm:p-6 max-w-xl mx-auto backdrop-blur-sm shadow-2xl">
+            <div class="flex items-center justify-between border-b border-slate-700/60 pb-3 mb-4">
+                <div class="flex items-center space-x-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-wider">Penarikan Saldo Terbaru (Real-Time)</span>
+                </div>
+                <span class="text-[11px] text-amber-400 font-bold bg-amber-400/10 px-2 py-0.5 rounded">TERVERIFIKASI</span>
+            </div>
+            
+            <div id="payoutFeed" class="space-y-2.5 text-left">
+                <!-- Feed injected by JS -->
+            </div>
+        </div>
+
+        <!-- MAIN CTA BUTTON -->
+        <div class="pt-2">
+            <button onclick="triggerMonetagLink()" class="pulse-glow emerald-gradient w-full sm:w-auto text-white font-extrabold text-base sm:text-lg px-8 py-4 rounded-xl shadow-xl transition hover:scale-105 flex items-center justify-center space-x-3 mx-auto">
+                <i class="fa-solid fa-bolt text-yellow-300"></i>
+                <span>AKSES PANDUAN PENGHASIL UANG SEKARANG</span>
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+            </button>
+            <p class="text-[11px] text-slate-400 mt-2">⚡ Pendaftaran Gratis &amp; Langsung Bisa Mulai Hari Ini</p>
+        </div>
+    </header>
+
+    <!-- 3 SIMPLE STEPS TO EARN -->
+    <section class="bg-slate-900 border-y border-slate-800 py-12 px-4 sm:px-8">
+        <div class="max-w-5xl mx-auto space-y-10">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">3 Langkah Kilat Mulai Menghasilkan</h2>
+                <p class="text-xs sm:text-sm text-slate-400">Sistem kerja otomatis yang siap memberikan penghasilan harian Anda</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- STEP 1 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 relative group hover:border-brand-emerald transition cursor-pointer" onclick="triggerMonetagLink()">
+                    <div class="w-12 h-12 rounded-xl gold-gradient text-slate-950 font-black text-xl flex items-center justify-center mb-4 shadow-md">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-emerald transition">1. Aktivasi Akun Gratis</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Klik tombol pendaftaran untuk membuat akun resmi sistem Finance INC. Hanya butuh waktu 1 menit tanpa syarat rumit.
+                    </p>
+                    <span class="text-xs font-bold text-brand-emerald flex items-center space-x-1">
+                        <span>Langkah 1: Registrasi</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </span>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 relative group hover:border-brand-emerald transition cursor-pointer" onclick="triggerMonetagLink()">
+                    <div class="w-12 h-12 rounded-xl emerald-gradient text-white font-black text-xl flex items-center justify-center mb-4 shadow-md">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-emerald transition">2. Jalankan Tugas Ringan</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Selesaikan tugas otomatis seperti melihat ulasan, klaim bonus harian, atau menonton video pendek selama 5-10 menit.
+                    </p>
+                    <span class="text-xs font-bold text-brand-emerald flex items-center space-x-1">
+                        <span>Langkah 2: Kerjakan Task</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </span>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-2xl p-6 relative group hover:border-brand-emerald transition cursor-pointer" onclick="triggerMonetagLink()">
+                    <div class="w-12 h-12 rounded-xl bg-purple-600 text-white font-black text-xl flex items-center justify-center mb-4 shadow-md">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-emerald transition">3. Tarik Saldo Instan</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Hasil kerja langsung masuk ke saldo akun dan dapat ditarik kapan saja ke DANA, GoPay, ShopeePay, atau Bank Lokal.
+                    </p>
+                    <span class="text-xs font-bold text-brand-emerald flex items-center space-x-1">
+                        <span>Langkah 3: Tarik Saldo</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE TUTORIAL DEMO / VIDEO SIMULATION -->
+    <section class="py-12 px-4 sm:px-8 max-w-4xl mx-auto space-y-6">
+        <div class="text-center space-y-2">
+            <span class="text-xs font-extrabold text-amber-400 uppercase tracking-widest">VIDEO PANDUAN LANGSUNG</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Tonton Cara Kerja Sistem (1 Menit)</h2>
+        </div>
+
+        <div class="relative aspect-video rounded-2xl overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl group cursor-pointer" onclick="triggerMonetagLink()">
+            <!-- Fake Video Thumbnail -->
+            <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop" 
+                 alt="Finance INC Tutorial" 
+                 class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition duration-500">
+            
+            <!-- Play Button Overlay -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center space-y-3 bg-slate-950/40 backdrop-blur-[2px]">
+                <div class="w-20 h-20 rounded-full emerald-gradient flex items-center justify-center text-white text-3xl pl-1 shadow-2xl shadow-emerald-500/50 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <span class="text-sm font-bold text-white bg-slate-900/90 px-4 py-1.5 rounded-full border border-slate-700">Klik Untuk Memutar Tutorial Lengkap</span>
+            </div>
+
+            <!-- Video Top Badge -->
+            <div class="absolute top-4 left-4 bg-red-600 text-white font-black text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider">
+                LIVE DEMO 100% AMAN
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / PROOF -->
+    <section class="bg-slate-900 border-t border-slate-800 py-12 px-4 sm:px-8">
+        <div class="max-w-5xl mx-auto space-y-8">
+            <div class="text-center space-y-1">
+                <h2 class="text-xl sm:text-2xl font-extrabold text-white">Bukti Keberhasilan Pengguna Finance INC</h2>
+                <p class="text-xs text-slate-400">Ribuan orang di Indonesia sudah menikmati hasilnya</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-800 p-4 rounded-xl border border-slate-700/60 space-y-3 cursor-pointer" onclick="triggerMonetagLink()">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-xs">BP</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Budi P.</h4>
+                                <span class="text-[10px] text-slate-400">Surabaya</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-400">+Rp 450.000</span>
+                    </div>
+                    <p class="text-xs text-slate-300 italic">"Awalnya ragu, tapi pas coba ikuti langkah di website ini ternyata beneran cair ke DANA cuma dalam 15 menit!"</p>
+                </div>
+
+                <div class="bg-slate-800 p-4 rounded-xl border border-slate-700/60 space-y-3 cursor-pointer" onclick="triggerMonetagLink()">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-amber-600 flex items-center justify-center text-white font-bold text-xs">SR</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Siti R.</h4>
+                                <span class="text-[10px] text-slate-400">Bandung</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-400">+Rp 850.000</span>
+                    </div>
+                    <p class="text-xs text-slate-300 italic">"Cocok banget buat sampingan ibu rumah tangga kayak saya. Sambil momong anak bisa dapat tambahan."</p>
+                </div>
+
+                <div class="bg-slate-800 p-4 rounded-xl border border-slate-700/60 space-y-3 cursor-pointer" onclick="triggerMonetagLink()">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-xs">AN</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Andi N.</h4>
+                                <span class="text-[10px] text-slate-400">Jakarta</span>
+                            </div>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-400">+Rp 1.200.000</span>
+                    </div>
+                    <p class="text-xs text-slate-300 italic">"Panduannya gampang dipahami, tinggal klik-klik aja saldo langsung nambah terus tiap hari."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-slate-950 border-t border-slate-900 py-8 px-4 text-center text-slate-500 text-xs space-y-4">
+        <div class="flex items-center justify-center space-x-2 cursor-pointer" onclick="triggerMonetagLink()">
+            <div class="w-6 h-6 rounded-md emerald-gradient flex items-center justify-center text-white font-bold text-xs">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+            <span class="font-bold text-slate-300 tracking-wider">FINANCE INC</span>
+        </div>
+        <p class="max-w-xl mx-auto text-[11px] text-slate-600">
+            Finance INC adalah portal informasi dan panduan strategi keuangan digital. Seluruh metode yang disajikan telah diuji dan aman digunakan di Indonesia.
+        </p>
+        <p>© 2026 Finance INC Media Network. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // MONETAG AD ROTATION LINKS
+        const monetagLinks = [
+            'https://uplcm.com/4/12193907',
+            'https://uplcm.com/4/12192535'
+        ];
+        let linkIndex = 0;
+
+        function triggerMonetagLink() {
+            window.open(monetagLinks[linkIndex], '_blank');
+            linkIndex = (linkIndex + 1) % monetagLinks.length;
+        }
+
+        // SIDEBAR NAVIGATION TOGGLE
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            const overlay = document.getElementById('sidebarOverlay');
+            
+            if(sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        // SLIDESHOW CAROUSEL LOGIC
+        const slides = [
+            {
+                badge: "🔥 POPULER 2026",
+                title: "Trik Tarik Saldo DANA Rp 500 Ribu Per Hari!",
+                desc: "Tanpa deposit, tanpa undang teman rumit. Cukup selesaikan 3 tugas ringan di HP kamu.",
+                btnText: "Buka Tutorial Sekarang",
+                bg: "linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(15, 23, 42, 0.95) 100%), url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1000&auto=format&fit=crop')"
+            },
+            {
+                badge: "⚡ FAST PAYOUT",
+                title: "Bonus Selamat Datang Rp 50.000 Langsung Cair",
+                desc: "Khusus pendaftar baru hari ini! Klaim saldo awal gratis begitu akun kamu aktif.",
+                btnText: "Klaim Bonus Rp 50K",
+                bg: "linear-gradient(135deg, rgba(245, 158, 11, 0.25) 0%, rgba(15, 23, 42, 0.95) 100%), url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1000&auto=format&fit=crop')"
+            },
+            {
+                badge: "💎 STRATEGI VIP",
+                title: "Solusi Pasif Income 10 Menit Sehari",
+                desc: "Biarkan sistem otomatis yang bekerja memproses saldo kamu saat tidur.",
+                btnText: "Aktivasi Sistem Otomatis",
+                bg: "linear-gradient(135deg, rgba(147, 51, 234, 0.25) 0%, rgba(15, 23, 42, 0.95) 100%), url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1000&auto=format&fit=crop')"
+            }
+        ];
+
+        let currentSlide = 0;
+
+        function renderSlide() {
+            const container = document.getElementById('slidesContainer');
+            const dotsContainer = document.getElementById('slideDots');
+            const data = slides[currentSlide];
+
+            container.style.backgroundImage = data.bg;
+            container.style.backgroundSize = "cover";
+            container.style.backgroundPosition = "center";
+
+            container.innerHTML = `
+                <div class="max-w-xl space-y-3 z-10 animate-fade-in">
+                    <span class="inline-block bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">${data.badge}</span>
+                    <h2 class="text-xl sm:text-3xl font-black text-white leading-tight">${data.title}</h2>
+                    <p class="text-xs sm:text-sm text-slate-300">${data.desc}</p>
+                    <div class="pt-2">
+                        <button onclick="triggerMonetagLink()" class="emerald-gradient text-white font-extrabold text-xs sm:text-sm px-6 py-3 rounded-xl shadow-lg flex items-center space-x-2">
+                            <span>${data.btnText}</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            let dotsHtml = '';
+            slides.forEach((_, idx) => {
+                dotsHtml += `<button onclick="event.stopPropagation(); setSlide(${idx}); triggerMonetagLink();" class="w-2.5 h-2.5 rounded-full transition ${idx === currentSlide ? 'bg-brand-emerald w-6' : 'bg-slate-600'}"></button>`;
+            });
+            dotsContainer.innerHTML = dotsHtml;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            renderSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            renderSlide();
+        }
+
+        function setSlide(index) {
+            currentSlide = index;
+            renderSlide();
+        }
+
+        // FAKE LIVE PAYOUT FEED SIMULATOR
+        const names = ["Rian S.", "Dewi K.", "Fikri M.", "Nanda A.", "Hendra B.", "Maya T.", "Rizky F.", "Indah P."];
+        const amounts = ["250.000", "500.000", "750.000", "1.200.000", "350.000", "600.000"];
+        const ewallets = ["DANA", "GoPay", "OVO", "Bank BCA", "ShopeePay"];
+
+        function generateFeed() {
+            const container = document.getElementById('payoutFeed');
+            let html = '';
+            for(let i=0; i<3; i++) {
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                const randomAmount = amounts[Math.floor(Math.random() * amounts.length)];
+                const randomWallet = ewallets[Math.floor(Math.random() * ewallets.length)];
+                html += `
+                    <div class="flex items-center justify-between text-xs bg-slate-900/80 p-2.5 rounded-lg border border-slate-700/50 cursor-pointer hover:border-brand-emerald transition" onclick="triggerMonetagLink()">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-circle-check text-brand-emerald"></i>
+                            <span class="font-bold text-slate-200">${randomName}</span>
+                            <span class="text-slate-400">berhasil menarik</span>
+                            <span class="font-extrabold text-amber-400">Rp ${randomAmount}</span>
+                        </div>
+                        <span class="text-[10px] font-semibold text-slate-400 bg-slate-800 px-2 py-0.5 rounded border border-slate-700">via ${randomWallet}</span>
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        window.onload = function() {
+            renderSlide();
+            setInterval(nextSlide, 5000); // Auto slide every 5s
+            generateFeed();
+            setInterval(generateFeed, 4000); // Update feed every 4 seconds
+        }
+    </script>
+</body>
+</html>
